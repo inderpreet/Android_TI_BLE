@@ -1,0 +1,73 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:20:1-50:12
+	xmlns:android
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:20:11-69
+	package
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:21:5-50
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:23:5-30
+	android:versionCode
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:22:5-28
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:25:5-26:40
+	android:targetSdkVersion
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:26:9-38
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:25:15-41
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml
+uses-feature#android.hardware.bluetooth_le
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:31:5-89
+	android:required
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:31:64-87
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:31:19-63
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:33:5-67
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:33:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:34:5-73
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:34:22-71
+application
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:36:5-48:19
+	android:label
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:36:18-50
+	android:icon
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:37:9-45
+	android:theme
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:38:9-56
+activity#com.tomaja.android.tricopter_lights.DeviceScanActivity
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:39:9-45:20
+	android:label
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:40:13-45
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:39:19-88
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:41:13-44:29
+action#android.intent.action.MAIN
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:42:17-68
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:42:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:43:17-76
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:43:27-74
+activity#com.tomaja.android.tricopter_lights.DeviceControlActivity
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:46:9-93
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:46:19-91
+service#com.tomaja.android.tricopter_lights.BluetoothLeService
+ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:47:9-112
+	android:enabled
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:47:88-110
+	android:name
+		ADDED from /Users/tomaja/Desktop/Code/DeviceScanActivity/app/src/main/AndroidManifest.xml:47:18-87
