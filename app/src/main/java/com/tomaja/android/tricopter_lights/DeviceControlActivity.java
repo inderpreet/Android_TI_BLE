@@ -11,15 +11,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.SeekBar;
 import android.widget.SimpleExpandableListAdapter;
+import android.widget.Space;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -121,12 +124,22 @@ public class DeviceControlActivity extends Activity {
                     sbGreen.setProgress(currentColor[1]);
                     sbBlue.setProgress(currentColor[2]);
                     sbWhite.setProgress(currentColor[3]);
+
+                    final SurfaceView sample = (SurfaceView) findViewById(R.id.sampleId);
+                    int nRed = unsignedToBytes(currentColor[0]) + (255 - unsignedToBytes(currentColor[0])) * unsignedToBytes(currentColor[3]) / 256;
+                    int nGreen = unsignedToBytes(currentColor[1]) + (255 - unsignedToBytes(currentColor[1])) * unsignedToBytes(currentColor[3]) / 256;
+                    int nBlue = unsignedToBytes(currentColor[2]) + (255 - unsignedToBytes(currentColor[2])) * unsignedToBytes(currentColor[3]) / 256;
+                    sample.setBackgroundColor(Color.rgb(nRed, nGreen, nBlue));
+                    // sample.setBackgroundColor(Color.rgb(unsignedToBytes(currentColor[0]), unsignedToBytes(currentColor[1]), unsignedToBytes(currentColor[2])));
                 }
 
             }
         }
     };
 
+    public static int unsignedToBytes(byte b) {
+        return b & 0xFF;
+    }
     // If a given GATT characteristic is selected, check for supported features.  This sample
     // demonstrates 'Read' and 'Notify' features.  See
     // http://d.android.com/reference/android/bluetooth/BluetoothGatt.html for the complete
@@ -214,6 +227,12 @@ public class DeviceControlActivity extends Activity {
                 value[0] = (byte)progress;
                 mRGBCharacteristic.setValue(value);
                 mBluetoothLeService.mBluetoothGatt.writeCharacteristic(mRGBCharacteristic);
+
+                final SurfaceView sample = (SurfaceView) findViewById(R.id.sampleId);
+                int nRed = unsignedToBytes(value[0]) + (255 - unsignedToBytes(value[0])) * unsignedToBytes(value[3]) / 256;
+                int nGreen = unsignedToBytes(value[1]) + (255 - unsignedToBytes(value[1])) * unsignedToBytes(value[3]) / 256;
+                int nBlue = unsignedToBytes(value[2]) + (255 - unsignedToBytes(value[2])) * unsignedToBytes(value[3]) / 256;
+                sample.setBackgroundColor(Color.rgb(nRed, nGreen, nBlue));
             }
         });
 
@@ -239,6 +258,12 @@ public class DeviceControlActivity extends Activity {
                 value[1] = (byte)progress;
                 mRGBCharacteristic.setValue(value);
                 mBluetoothLeService.mBluetoothGatt.writeCharacteristic(mRGBCharacteristic);
+
+                final SurfaceView sample = (SurfaceView) findViewById(R.id.sampleId);
+                int nRed = unsignedToBytes(value[0]) + (255 - unsignedToBytes(value[0])) * unsignedToBytes(value[3]) / 256;
+                int nGreen = unsignedToBytes(value[1]) + (255 - unsignedToBytes(value[1])) * unsignedToBytes(value[3]) / 256;
+                int nBlue = unsignedToBytes(value[2]) + (255 - unsignedToBytes(value[2])) * unsignedToBytes(value[3]) / 256;
+                sample.setBackgroundColor(Color.rgb(nRed, nGreen, nBlue));
             }
         });
 
@@ -264,6 +289,12 @@ public class DeviceControlActivity extends Activity {
                 value[2] = (byte)progress;
                 mRGBCharacteristic.setValue(value);
                 mBluetoothLeService.mBluetoothGatt.writeCharacteristic(mRGBCharacteristic);
+
+                final SurfaceView sample = (SurfaceView) findViewById(R.id.sampleId);
+                int nRed = unsignedToBytes(value[0]) + (255 - unsignedToBytes(value[0])) * unsignedToBytes(value[3]) / 256;
+                int nGreen = unsignedToBytes(value[1]) + (255 - unsignedToBytes(value[1])) * unsignedToBytes(value[3]) / 256;
+                int nBlue = unsignedToBytes(value[2]) + (255 - unsignedToBytes(value[2])) * unsignedToBytes(value[3]) / 256;
+                sample.setBackgroundColor(Color.rgb(nRed, nGreen, nBlue));
             }
         });
 
@@ -289,6 +320,12 @@ public class DeviceControlActivity extends Activity {
                 value[3] = (byte)progress;
                 mRGBCharacteristic.setValue(value);
                 mBluetoothLeService.mBluetoothGatt.writeCharacteristic(mRGBCharacteristic);
+
+                final SurfaceView sample = (SurfaceView) findViewById(R.id.sampleId);
+                int nRed = unsignedToBytes(value[0]) + (255 - unsignedToBytes(value[0])) * unsignedToBytes(value[3]) / 256;
+                int nGreen = unsignedToBytes(value[1]) + (255 - unsignedToBytes(value[1])) * unsignedToBytes(value[3]) / 256;
+                int nBlue = unsignedToBytes(value[2]) + (255 - unsignedToBytes(value[2])) * unsignedToBytes(value[3]) / 256;
+                sample.setBackgroundColor(Color.rgb(nRed, nGreen, nBlue));
             }
         });
     }
